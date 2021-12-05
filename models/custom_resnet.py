@@ -7,9 +7,9 @@ import torch.nn as nn
 import torch.nn.functional as F
 
 
-class NewResnet(nn.Module):
+class CustomResnet(nn.Module):
     def __init__(self):
-        super(NewResnet, self).__init__()
+        super(CustomResnet, self).__init__()
 
 	#prep layer 
         self.preplayer = nn.Sequential(
