@@ -85,7 +85,6 @@ def ResNet34():
     return ResNet(BasicBlock, [3, 4, 6, 3])
 
 
-
 def test():
     net = ResNet18()
     y = net(torch.randn(1, 3, 32, 32))
