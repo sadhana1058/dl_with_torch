@@ -1,4 +1,5 @@
 from tqdm import tqdm
+import torch
 
 def train(model, device, train_loader, optimizer, scheduler,criterion, epoch, train_losses, train_accuracy):
   model.train()
