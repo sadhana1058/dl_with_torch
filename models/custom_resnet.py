@@ -7,9 +7,9 @@ import torch.nn as nn
 import torch.nn.functional as F
 
 
-class NewResnet(nn.Module):
+class CustomResnet(nn.Module):
     def __init__(self):
-        super(NewResnet, self).__init__()
+        super(CustomResnet, self).__init__()
 
 	#prep layer 
         self.preplayer = nn.Sequential(
@@ -83,9 +83,9 @@ class NewResnet(nn.Module):
 
         layer2 = self.layer2(layer1)
 
-        x2 = self.x2(layer2)
-        r2 = self.r2(x2)
-        layer3 = r2+x2
+        x3 = self.x2(layer2)
+        r2 = self.r2(x3)
+        layer3 = r2+x3
 
         maxpool = self.pool(layer3)
 
