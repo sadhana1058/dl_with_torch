@@ -83,9 +83,9 @@ class CustomResnet(nn.Module):
 
         layer2 = self.layer2(layer1)
 
-        x2 = self.x2(layer2)
-        r2 = self.r2(x2)
-        layer3 = r2+x2
+        x3 = self.x2(layer2)
+        r2 = self.r2(x3)
+        layer3 = r2+x3
 
         maxpool = self.pool(layer3)
 
