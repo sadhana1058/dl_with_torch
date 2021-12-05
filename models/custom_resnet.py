@@ -27,7 +27,7 @@ class NewResnet(nn.Module):
             )
 
 	#Residual Block 1 
-        self.R1 = nn.Sequential(
+        self.r1 = nn.Sequential(
             nn.Conv2d(in_channels=128, out_channels=128, kernel_size=(3, 3), padding=1, bias=False), 
             nn.BatchNorm2d(128),
             nn.ReLU(),
@@ -54,7 +54,7 @@ class NewResnet(nn.Module):
             )
 
 	#Residual Block 2
-        self.R2 = nn.Sequential(
+        self.r2 = nn.Sequential(
             nn.Conv2d(in_channels=512, out_channels=512, kernel_size=(3, 3), padding=1, bias=False), 
             nn.BatchNorm2d(512),
             nn.ReLU(),
@@ -78,14 +78,14 @@ class NewResnet(nn.Module):
         preplayer = self.preplayer(x) 
 
         x1 = self.x1(preplayer)
-        R1 = self.R1(x1)
-        layer1 = x1+R1
+        r1 = self.r1(x1)
+        layer1 = x1+r1
 
         layer2 = self.layer2(layer1)
 
         x2 = self.x2(layer2)
-        R2 = self.R2(x2)
-        layer3 = R2+x2
+        r2 = self.r2(x2)
+        layer3 = r2+x2
 
         maxpool = self.pool(layer3)
 
