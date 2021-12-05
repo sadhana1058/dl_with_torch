@@ -1,6 +1,6 @@
 import matplotlib.pyplot as plt
 
-def plot_train_test_accurracy_loss(train_losses,train_accuracy, test_losses,  test_accuracy):
+def plot_train_test_acc_loss(train_losses,train_accuracy, test_losses,  test_accuracy):
   fig, axs = plt.subplots(2,2,figsize=(16,10))
   axs[0, 0].plot(train_losses, label='Training Loss') 
   axs[0, 0].set_title("Training Loss") 
