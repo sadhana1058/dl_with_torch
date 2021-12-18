@@ -1,4 +1,8 @@
 # dl_with_torch
+* A deep nueral network library
+* Built using pytorch
+* This library has ready to use functions for training and testing the CNN models for CV applications
+* This project is currently under development
 
 ### Contents
 
