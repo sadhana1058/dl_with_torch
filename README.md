@@ -25,8 +25,8 @@
   * plot_train_test_accuracy.py
   * subset.py
   
-  * gradcam folder
-    * Files in this folder have required functions for gradcam calculation and visualization
-    * gradcam.py
-    * visualization.py
+ * src/gradcam folder
+   * Files in this folder have required functions for gradcam calculation and visualization
+   * gradcam.py
+   * visualization.py
 
